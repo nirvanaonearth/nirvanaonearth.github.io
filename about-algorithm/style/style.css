@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+}
+
+header > a{
+    color: #174099;
+    font: 'Ubuntu';
+}
+
+header{
+    padding: 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+html > body{
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    line-height: 1.4em;
+    padding: 20px 0 0 0;
+}
+@media all and (max-width: 500px){
+    html > body{
+        font-size: 16px;
+
+    }
+}
+
+@media all and (min-width: 2300px){
+    html > body{
+        font-size: 22px;
+    }
+}
+
+div{
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+}
+html > body b{
+    font-weight: 600;
+}
+
+html > body i{
+    font-style: italic;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 1.35em;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
+h1, h2, h3{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    padding: 20px;
+    text-align: center;
+}
+
+.wrapper{
+    max-width: 1000px;
+    width: 90vw;
+    margin: auto;
+}
+
+p{
+    margin: 100px 0;
+}
+
+.slider-title{
+    padding-bottom: 0;
+}
+
+.slider{
+    height: 97vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slide > h3{
+    padding: 0;
+}
+
+.slide > img{
+    max-width: 80%;
+    min-width: 260px;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.controllers{
+    padding-bottom: 8px;
+    margin-top: auto;
+    border-bottom: 2px solid #8bc34a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button.move{
+    box-shadow: none;
+    border: 2px solid #8bc34a;
+    color: #8bc34a;
+    background-color: #e7f3da;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-family: 'Ubuntu', serif;
+    position: relative;
+    top: 0;
+    transition: 0.3s;
+    transition-property: color, background-color, border-color, top;
+    cursor: pointer;
+}
+
+button.move.current-slide, button.move.current-slide:hover{
+    color: #005996;
+    border-color: #005996;
+    background-color: #cbddea;
+    top: 0;
+}
+
+button.move:hover{
+    color: #e7f3da;
+    border-color: #e7f3da;
+    background-color: #8bc34a;
+    top: -2px;
+    transition: 0.3s;
+    transition-property: color, background-color, border-color, top;
+}
+
+button.move.impossible{
+    background-color: white;
+}
+
+button, button:active, button:focus{
+    outline: none;
+}
+
+button.move.impossible:hover, button.move.impossible{
+    top: 0;
+    color: #8bc34a;
+    cursor: default;
+    border-color: #8bc34a;
+}
+
+div.slide{
+    display: none;
+}
+
+
+
+div.slide.picked{
+    display: block;
+}
+
+.legend{
+    position: relative;
+    top: -80px;
+    margin-bottom: -80px;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.annotation{
+    margin: 0;
+}
+
+@media all and (max-width: 450px){
+    .legend{
+        top: -40px;
+        margin-bottom: -40px;
+    }
+}
